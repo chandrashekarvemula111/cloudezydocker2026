@@ -1,9 +1,8 @@
 FROM node:20
 WORKDIR /app
 EXPOSE 8080
-ADD https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip .
-COPY  catalogue-v3/package.json .
-COPY catalogue-v3/*.js .
+COPY  package.json .
+COPY *.js .
 RUN npm install
 ENV MONGO = "true" \
     MONGO_URL = "mongodb://mongodb:27017/catalogue"
