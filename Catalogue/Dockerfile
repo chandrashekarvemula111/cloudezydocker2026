@@ -1,4 +1,4 @@
-FROM nodejs:20
+FROM node:20
 WORKDIR /app
 EXPOSE 8080
 ADD https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip .
